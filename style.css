@@ -1,3 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@media (max-width : 600px){}
+#navbar{
+    background-color: #070505;
+    overflow: hidden;
+    display : flex;
+    border-top: 5px solid #ffe082;
+    border-bottom: 5px solid #ffe082;
+    width : 100%;
+}
+#logo img{
+    height: 60px;
+    color: white;
+    font-weight: bold;
+    padding: 14px 20px;
+    text-decoration: none;
+   
+}
+.items{
+    list-style-type: none;
+    margin: 0;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    gap : 20%;
+    
+}
+.items li a{
+    color: white;
+      max-width: 98vw;
+        font-size: 0.95rem;
+    font-size : 1.5vw;
+    font-weight: bold;
+   text-decoration: none;
+    display: block;
+    
+}
 
 
 @media (max-width: 600px) {
@@ -25,8 +65,8 @@
 
     .welcome-img,
     .food-img {
-        width: 60px;
-        height: 60px;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .welcome-text {
@@ -34,40 +74,34 @@
         font-size: 0.95rem;
     }
 }
+.menu-header{
+    text-align: center;
+    color: #b8c52f;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
 
-/* Clean, responsive navbar */
-#navbar {
-    display: flex;
-    background-color: black;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 16px;
-    flex-wrap: wrap;
 }
 
-.items {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    align-items: center;
+.buttons{
+    text-align: center;
+    background-color: #cbd0ad;
+    font-size: 1.2rem;
+    margin-bottom: 5%;
+    padding : 10px;
 }
 
-.items li a {
-    color: rgb(244, 227, 81);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background 0.2s, color 0.2s;
-    display: block;
+.food-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 10px;
 }
-.items li a:hover {
-    background: #222;
-    color: #fff;
+
+
+
+.food-img
+ {
+    width: 90px;
+    height: 90px;
 }
 
 
@@ -77,8 +111,7 @@
 }
 
 .food-menu-container,
-.contact-form-block,
-.welcome-container {
+.contact-form-block {
     padding: 8px 2vw;
     max-width: 100vw;
 }
@@ -93,7 +126,7 @@
     padding: 12px 0;
 }
 
-.welcome-img,
+
 .food-img {
     width: 600px;
     height: 600px;
@@ -105,10 +138,6 @@
 
 
 
-.welcome-text {
-    max-width: 98vw;
-    font-size: 0.95rem;
-}
 
 
 .order-btn {
@@ -185,60 +214,50 @@
 .food-menu-container {
     background: rgba(0, 0, 0, 0.92);
     border-radius: 28px;
-    @media (max-width: 600px) {
-        .food-grid {
-            grid-template-columns: 1fr;
-            gap: 12px 0;
-        }
-        .food-menu-container, .contact-form-block, .welcome-container {
-            padding: 8px 2vw;
-            max-width: 100vw;
-        }
-        .menu-title, .contact-form-block h2 {
-            font-size: 1.1rem;
-        }
-        .order-btn {
-            width: 100%;
-            padding: 12px 0;
-        }
-        .welcome-img, .food-img {
-            width: 60px;
-            height: 60px;
-        }
-        .face {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 100vw;
-            padding: 0 2vw;
-        }
-        .face-left, .face-right {
-            width: 50px;
-            height: 50px;
-            margin-top: 10px;
-            margin-left: 0;
-            margin-right: 0;
-        }
-        .welcome-text {
-            max-width: 98vw;
-            font-size: 0.95rem;
-        }
-        .items {
-            flex-direction: column;
-            width: 100%;
-            align-items: flex-start;
-            gap: 0;
-        }
-        .items li a {
-            width: 100%;
-            padding: 12px 0;
-            border-radius: 0;
-            border-bottom: 1px solid #222;
-        }
-    }
-    }
+    max-width: 1200px;
+    margin: 60px auto 40px auto;
+    padding: 48px 32px 32px 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
 
+.menu-title {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 36px;
+    letter-spacing: 2px;
+}
 
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 28px;
+}
+
+.food-item {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 18px;
+    padding: 24px 16px 18px 16px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.food-item:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+}
+
+.food-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    background: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
 
 .food-item h3 {
     margin: 10px 0 8px 0;
@@ -255,9 +274,10 @@
 .welcome-container {
     background: rgba(0, 0, 0, 0.85);
     border-radius: 24px;
-    width: 80%;
+    
     margin: 60px auto 0 auto;
-    padding: 4%;
+     padding: 8px 2vw;
+        max-width: clamp(300px, 90%, 900px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -266,8 +286,8 @@
 }
 
 .welcome-img {
-    height: 180px;
-    width: 180px;
+    height: 70%;
+    width: 70%;
     object-fit: contain;
     border-radius: 16px;
     background: none;
@@ -289,6 +309,32 @@
     font-size: 1.15rem;
     line-height: 1.6;
 }
+.welcome-text h2{
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  color: #ffe082;
+  overflow: hidden;
+  background: linear-gradient(90deg, #e32dc5, #30ea77, #e87457);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 200% 0; }
+  100% { background-position: 0 0; }
+}
+
+.welcome-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.85); 
+}
+
 
 body {
     position: relative;
