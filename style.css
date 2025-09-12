@@ -10,6 +10,9 @@
     border-top: 5px solid #ffe082;
     border-bottom: 5px solid #ffe082;
     width : 100%;
+    z-index: 100;
+    position: sticky;
+    top: 0;
 }
 #logo img{
     height: 60px;
@@ -230,7 +233,7 @@
 
 .food-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 36px 28px;
 }
 
@@ -292,12 +295,14 @@
     border-radius: 16px;
     background: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
 }
 
 .welcome-text {
     color: #fff;
     text-align: center;
     max-width: 350px;
+    margin-right : 80px ;
 }
 
 .welcome-text h1 {
